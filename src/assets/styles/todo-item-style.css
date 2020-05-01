@@ -1,0 +1,69 @@
+.todo-item {
+  position: relative;
+  cursor: pointer;
+  font-size: .8rem;
+  background-color: #dcdcdc;
+  width: 75%;
+  margin: 0 auto 15px auto;
+  padding: 5px 0 5px 5px;
+  border-radius: 10px;
+  -webkit-box-shadow: -3px -3px 7px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -3px -3px 7px 0px rgba(0,0,0,0.75);
+  box-shadow: -3px -3px 7px 0px rgba(0,0,0,0.75);
+}
+
+.todo-item:hover {
+  background-color: #c0c0c0;
+}
+
+.item-completed {
+  background-color: #42b983 !important;
+}
+
+.todo-item > .icons {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.todo-item > .icons > .icon {
+  margin-left: 10px;
+  transition: .2s;
+}
+
+.todo-item > .icons > .icon:hover {
+  color: #42b983; 
+}
+
+.todo-item > .icons > #delete:hover {
+  color: red;
+}
+
+.todo-item > .icons > a {
+  color: #2c3e50;
+  transition: .2s;
+}
+
+.todo-item > .icons > a:hover {
+  color: #ADFF2F;
+}
+
+.todo-item > ol {
+  padding-top: 10px;
+  padding-left: 3rem;
+}
+
+.todo-item > ol > li {
+  position: relative;
+  font-size: .9rem;
+  padding-left: 10px;
+  margin-bottom: 7px;
+}
+
+.todo-item > ol > li > input {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+}

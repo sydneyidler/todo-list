@@ -1,28 +1,47 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="nav">
+      <router-link to="/todos">
+        Todos
+      </router-link>
+      <router-link to="/create-todo">
+        Create New Todo
+      </router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
+  
+  html {
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    color: #2c3e50;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+  #nav {
+    padding: 30px;
+    text-align: center;
+  }
+
+  #nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-left: 7px;
+  }
+
+  #nav a.router-link-exact-active {
+    color: #42b983;
+  }
 </style>
