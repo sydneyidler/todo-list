@@ -37,13 +37,13 @@
         this.isModalVisible = true;
         this.title = title;       
       },
-      deleteTodo () {
+      async deleteTodo () {
         this.isModalVisible = false;
 
-        deleteTodo(this.title);
+        await deleteTodo(this.title);
         delete this.title;
 
-        this.$router.go();
+        this.todos = await getTodosFromDb();
       }
     }
 	}
